@@ -13,7 +13,7 @@ import java.util.Scanner;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
-public class GameAction {
+public final class GameAction {
     
     public static class IllegalFileException extends Exception {}
     
@@ -50,7 +50,7 @@ public class GameAction {
                             fields.add(field);
                         }
                     }
-                    model.startGameWindow();
+                    model.startGameWindow(true);
             }
         };
     }
@@ -96,7 +96,7 @@ public class GameAction {
                         }
                         
                         if (row >= size) throw new IllegalFileException();
-                        model.startGameWindow();
+                        model.startGameWindow(true);
 
                     } catch (IllegalFileException ex) {
                         JOptionPane.showMessageDialog(window, "Not proper Breakthrough saved file.");

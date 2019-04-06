@@ -15,7 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class MenuWindow extends BaseWindow {
+public final class MenuWindow extends BaseWindow {
     
     private static ArrayList<GameWindow> games;
     private static MenuWindow instance;

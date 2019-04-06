@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import static javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE;
 
-public class BaseWindow extends JFrame {
+public abstract class BaseWindow extends JFrame {
 
     /**
      * Beállítja a minden ablakra egységesen vonatkozó tulajdonságokat:

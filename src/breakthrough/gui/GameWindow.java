@@ -15,12 +15,12 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class GameWindow extends BaseWindow {
+public final class GameWindow extends BaseWindow {
 
     private final int size;
     private final Model model;
-    private JLabel footerLabel;
-    private Timer footerTimer;
+    private final JLabel footerLabel;
+    private final Timer footerTimer;
     private final ArrayList<Field> fields;
     
     /**

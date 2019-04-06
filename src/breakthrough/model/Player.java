@@ -1,7 +1,6 @@
 package breakthrough.model;
 
 import breakthrough.Breakthrough;
-import breakthrough.gui.BaseWindow;
 import java.awt.Toolkit;
 import static java.lang.Math.abs;
 import java.net.URL;

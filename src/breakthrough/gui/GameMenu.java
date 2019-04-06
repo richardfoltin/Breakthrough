@@ -8,7 +8,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 
-public class GameMenu extends JMenuBar {
+public final class GameMenu extends JMenuBar {
 
     private final JMenu newGameMenu;
     private final JMenuItem loadMenu;

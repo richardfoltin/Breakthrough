@@ -4,14 +4,13 @@ import breakthrough.gui.GameWindow;
 import breakthrough.gui.MenuWindow;
 import java.util.ArrayList;
 
-public class Model {
-
-    private int size;
+public final class Model {
 
     private Player actualPlayer;
     private Field selectedField;
     private GameWindow game;
-    private ArrayList<Field> fields;
+    private final int size;
+    private final ArrayList<Field> fields;
 
     /**
      * A játék modeljének konstruktora
@@ -101,10 +100,10 @@ public class Model {
     /**
      * Elindítja a modelhez tartozó játékablakot
      */
-    public void startGameWindow() {
+    public void startGameWindow(boolean visible) {
         this.game = new GameWindow(this);
-        MenuWindow.getInstance().addGame(game);
-        game.setVisible(true);
+        if (visible) MenuWindow.getInstance().addGame(game);
+        game.setVisible(visible);
     }
     
     /**
@@ -121,6 +120,5 @@ public class Model {
     public Player getActualPlayer() {return actualPlayer;}   
     public boolean selectionComes() {return (selectedField == null);}
     public ArrayList<Field> getFields() { return fields;}
-    
-
+    public GameWindow getGame() {return game;}
 }

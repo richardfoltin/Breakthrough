@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.awt.Color;
 import javax.swing.JButton;
 
-public class Field extends JButton {
+public final class Field extends JButton {
     
     private final int row;
     private final int column;
@@ -71,8 +71,8 @@ public class Field extends JButton {
      * Beállítja a mezőre a új játék indításakori alapértelmezett játékost.
      */
     public void setDefaultPlayer(){
-        if (column == 0) setPlayer(Player.HUMAN);
-        else if (column == model.getSize()-1) setPlayer(Player.ORC);
+        if (column == 0 || column == 1) setPlayer(Player.HUMAN);
+        else if (column == model.getSize()-1 || column == model.getSize()-2) setPlayer(Player.ORC);
         else removePlayer();
     }
     
